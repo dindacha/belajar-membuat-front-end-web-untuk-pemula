@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Bookshelf App</h1>
+    </header>
+    <main>
+      <section class="input-section">
+        <div>
+          <h2>Masukkan Reading List</h2>
+          <form id="input-book">
+            <div class="input title">
+              <label for="inputBookTitle">Judul</label>
+              <input id="inputBookTitle" type="text" placeholder="Bumi" required />
+            </div>
+            <div class="flex-row">
+              <div class="input author">
+                <label for="inputBookAuthor">Penulis</label>
+                <input id="inputBookAuthor" type="text" placeholder="Tere Liye" required />
+              </div>
+              <div class="input year">
+                <label for="inputBookYear">Tahun</label>
+                <input id="inputBookYear" type="number" placeholder="2014" required />
+              </div>
+            </div>
+            <div class="flex-row">
+              <div class="input-checkbox">
+                <label for="dibaca">Selesai dibaca</label>
+                <input id="dibaca" type="checkbox" />
+              </div>
+              <div class="button">
+                <button id="input-submit" type="submit">Tambah</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="find-book">
+            <h3>Cari Buku</h3>
+            <form id="find-book">
+              <input id="inputFindBook" type="text" placeholder="Judul Buku" />
+              <button id="find" type="button">Cari</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="book-shelf">
+        <h3 class="ongoing">Belum Selesai Dibaca</h3>
+        <div class="book-list" id="belumDibaca">
+          <!--
+                daftar buku
+                -->
+        </div>
+      </section>
+
+      <section class="book-shelf">
+        <h3 class="done">Selesai Dibaca</h3>
+        <div class="book-list" id="telahDibaca">
+          <!--
+                daftar buku
+                -->
+        </div>
+      </section>
+
+      <section class="edit-section" hidden>
+        <div class="edit-form">
+          <button id="closeForm">X</button>
+          <form id="edit-book">
+            <h3>Edit Buku</h3>
+            <div class="input title">
+              <label for="editBookTitle">Judul</label>
+              <input id="editBookTitle" type="text" required />
+            </div>
+
+            <div class="flex-row">
+              <div class="input author">
+                <label for="editBookAuthor">Penulis</label>
+                <input id="editBookAuthor" type="text" required />
+              </div>
+              <div class="input year">
+                <label for="editBookYear">Tahun</label>
+                <input id="editBookYear" type="number" required />
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <div class="input-checkbox">
+                <label for="editBaca">Selesai dibaca</label>
+                <input id="editBaca" type="checkbox" />
+              </div>
+              <div class="button">
+                <button id="edit-submit" type="button">Edit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Copyright &copy; 2022 dindacha<br /></p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="dom.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
